@@ -1,0 +1,32 @@
+[package]
+name = "playground-pyrust"
+version = "0.1.0"
+edition = "2021"
+
+
+#########  From https://github.com/PyO3/pyo3 ###########
+[lib]
+name = "myutils"
+
+# name = "string_sum"
+# "cdylib" is necessary to produce a shared library for Python to import from.
+#
+# Downstream Rust code (including code in `bin/`, `examples/`, and `tests/`) will not be able
+# to `use string_sum;` unless the "rlib" or "lib" crate type is also included, e.g.:
+# crate-type = ["cdylib", "rlib"]
+crate-type = ["cdylib", "lib"]
+
+[dependencies.pyo3]
+version = "0.15.0"
+
+###################### https://pyo3.rs/v0.7.0-alpha.1/advanced.html#testing #######################
+
+[features]
+extension-module = ["pyo3/extension-module"]
+default = ["extension-module"]
+
+
+
+[[bin]]
+name = "prog01-rust"
+path = "src/bin/prog01-rust.rs"
