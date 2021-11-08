@@ -4,6 +4,8 @@ This is also to compare speeds
 
 # Set up
 
+Go to the project folder.
+
 From the [Py03 page](https://github.com/PyO3/pyo3)
 
 ```
