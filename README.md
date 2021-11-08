@@ -52,7 +52,7 @@ cargo test --no-default-features
 You can generate an executable that calls our `multi_and_sum` function
 
 ```
-cargo builb --release --no-default-features
+cargo build --release --no-default-features
 ```
 
 This will result in an executable called `prog01-rust`
@@ -88,6 +88,15 @@ real	0m0,066s
 user	0m0,061s
 sys	0m0,004s
 ```
+
+# Note
+
+The above commands must be run where you created the python environment.
+
+If you want to use the module outside of this env, copy the file at `target/release/libmyutils.so` to `the/path/here/myutils.so` where `./prog01-rs.py` (python script that uses this module) is in `the/path/here`
+
+See https://pyo3.rs/v0.15.0/building_and_distribution.html#manual-builds
+> on Linux, rename `libyour_module.so` to `your_module.so`.
 
 
 # Reference:
