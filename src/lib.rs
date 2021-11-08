@@ -14,9 +14,7 @@ pub fn multi_and_sum(x: Vec<u64>, y: Vec<u64>) -> PyResult<u64> {
 
 #[pymodule]
 fn myutils(_py: Python, m: &PyModule) -> PyResult<()> {
-    m.add_function(wrap_pyfunction!(multi_and_sum, m)?)?;
-
-    Ok(())
+    m.add_function(wrap_pyfunction!(multi_and_sum, m)?)
 }
 
 #[cfg(test)]
