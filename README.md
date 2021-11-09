@@ -60,6 +60,7 @@ This will result in an executable called `prog01-rust`
 At the root of the project you have 
 * `prog01-py.py` : A simple python script that **does exactly** what our rust function does
 * `prog01-rs.py` : A simple python script that **calls** our rust function
+* `prog01-np.py` : A simple python script that **does exactly** what our rust function does with the help of the `numpy` lib.
 * `prog01-rust`  : A rust main function that **calls** our rust function `multi_and_sum` 
 
 ```
@@ -78,6 +79,15 @@ $ time ./prog01-rs.py
 real	0m2,546s
 user	0m2,533s
 sys	0m0,012s
+```
+
+```
+$ time ./prog01-np.py 
+2499500025000000
+
+real	0m0,350s
+user	0m0,226s
+sys	0m0,121s
 ```
 
 ```

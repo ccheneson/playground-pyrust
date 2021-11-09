@@ -4,8 +4,8 @@ use pyo3::prelude::*;
 #[pyfunction]
 pub fn multi_and_sum(x: Vec<u64>, y: Vec<u64>) -> PyResult<u64> {
     let mut result: u64 = 0;
-    for i in x.iter() {
-        for j in y.iter() {
+    for i in &x {
+        for j in &y {
             result = result + (i * j);
         }
     }
