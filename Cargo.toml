@@ -6,7 +6,7 @@ edition = "2021"
 
 #########  From https://github.com/PyO3/pyo3 ###########
 [lib]
-name = "myutils"
+name = "rustils"
 
 # name = "string_sum"
 # "cdylib" is necessary to produce a shared library for Python to import from.

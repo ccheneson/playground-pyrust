@@ -1,6 +1,6 @@
 #!./.env/bin/python3
-import myutils
+import rustils
 
-result = myutils.multi_and_sum(range(10000), range(10000))
+result = rustils.multi_and_sum(range(10000), range(10000))
 
 print(result)

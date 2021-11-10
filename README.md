@@ -30,8 +30,8 @@ Now build and execute the module:
 ```
 $ maturin develop
 $ python
->>> import myutils
->>> myutils.multi_and_sum(range(10000), range(10000))
+>>> import rustils
+>>> rustils.multi_and_sum(range(10000), range(10000))
 2499500025000000
 >>> 
 ```
@@ -103,7 +103,7 @@ sys	0m0,004s
 
 The above commands must be run where you created the python environment.
 
-If you want to use the module outside of this env, copy the file at `target/release/libmyutils.so` to `the/path/here/myutils.so` where `./prog01-rs.py` (python script that uses this module) is in `the/path/here`
+If you want to use the module outside of this env, copy the file at `target/release/librustils.so` to `the/path/here/rustils.so` where `./prog01-rs.py` (python script that uses this module) is in `the/path/here`
 
 See https://pyo3.rs/v0.15.0/building_and_distribution.html#manual-builds
 > on Linux, rename `libyour_module.so` to `your_module.so`.
